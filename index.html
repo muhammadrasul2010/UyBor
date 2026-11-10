@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UyBor — Zamonaviy uylar bozori</title>
+  <meta name="description" content="UyBor.uz — O'zbekistondagi zamonaviy dachalar, hovli uylar va kvartiralar. O'zingizga mos uyni bir joydan toping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="brand" aria-label="UyBor.uz bosh sahifa">
+        <span class="brand__mark" aria-hidden="true">U</span>
+        <span class="brand__name">UyBor.uz<small>UY ICHI + HOVLI HAYOTI</small></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#uylar" data-cat="all" class="is-active">Barcha uylar</a>
+        <a href="#uylar" data-cat="Hovli">Hovli</a>
+        <a href="#uylar" data-cat="Kvartira">Kvartira</a>
+        <a href="#uylar" data-cat="Dacha">Dacha</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="phone-pill" href="tel:+998976577766">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <span>+998 97 657 77 66</span>
+        </a>
+        <button class="icon-btn" id="wishBtn" type="button" aria-label="Saqlangan uylar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-9.3A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.7C19 15.6 12 20 12 20Z"/></svg>
+        </button>
+        <button class="cart-btn" id="cartBtn" type="button" aria-label="Savatchani ochish">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 12H7L6 7Z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+          <span>Savat</span>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menyuni ochish" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow"><span class="dot"></span> Zamonaviy uylar bozori</span>
+          <h1>O'zingizga mos<br /><span class="grad">zamonaviy uy</span>ni toping</h1>
+          <p class="lead">
+            Dachalar, hovli uylar va kvartiralar — barchasi tekshirilgan
+            hujjatlar bilan. Xohlagan uyingizni bir necha bosishda toping.
+          </p>
+
+          <form class="searchbar" id="searchForm" role="search">
+            <label class="field">
+              <span>Turi</span>
+              <select id="heroType">
+                <option value="all">Barchasi</option>
+                <option value="Hovli">Hovli</option>
+                <option value="Kvartira">Kvartira</option>
+                <option value="Dacha">Dacha</option>
+              </select>
+            </label>
+            <label class="field field--grow">
+              <span>Manzil yoki nom</span>
+              <input type="text" id="heroQuery" placeholder="Masalan: Toshkent, Chirchiq..." autocomplete="off" />
+            </label>
+            <button class="btn btn--accent" type="submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-3.2-3.2" />
+              </svg>
+              Qidirish
+            </button>
+          </form>
+
+          <div class="stats">
+            <div class="stat"><strong>1 200+</strong><span>Sotilgan uy</span></div>
+            <div class="stat"><strong>15 yil</strong><span>Bozor tajribasi</span></div>
+            <div class="stat"><strong>4.9<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8L12 3Z"/></svg></strong><span>Mijoz bahosi</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="panel">
+            <img class="panel__art" src="images/exterior-15.jpg" alt="Tunda yoritilgan zamonaviy hashamatli villa" />
+            <div class="float float--a">
+              <span class="float__dot"></span> Yangi · Dacha
+            </div>
+            <div class="float float--b">
+              <strong>320 m²</strong><span>5 xona · 2 qavat</span>
+            </div>
+            <div class="float float--c">
+              <span class="float__muted">Narxi</span>
+              <strong>2,45 mlrd so'm</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uylar">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> Sotuvdagi uylar</span>
+            <h2>Tanlangan zamonaviy uylar</h2>
+            <p class="muted">Har biri o'ziga xos dizayn va joylashuvga ega.</p>
+          </div>
+          <div class="toolbar">
+            <div class="chips" id="chips" role="tablist" aria-label="Uy turi">
+              <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Barcha uylar</button>
+              <button class="chip" data-filter="Hovli" role="tab" aria-selected="false">Hovli</button>
+              <button class="chip" data-filter="Kvartira" role="tab" aria-selected="false">Kvartira</button>
+              <button class="chip" data-filter="Dacha" role="tab" aria-selected="false">Dacha</button>
+            </div>
+            <label class="sort">
+              <span>Tartiblash</span>
+              <select id="sortSelect">
+                <option value="default">Tavsiya</option>
+                <option value="asc">Arzon narx</option>
+                <option value="desc">Qimmat narx</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="grid" id="grid" aria-live="polite"></div>
+        <p class="empty" id="empty" hidden>Hech narsa topilmadi. Filtrni o'zgartirib ko'ring.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="nega-biz">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="eyebrow"><span class="dot"></span> Nega UyBor?</span>
+          <h2>Ishonchli uy izlash tajribasi</h2>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3 4 6v6c0 5 3.4 7.7 8 9 4.6-1.3 8-4 8-9V6l-8-3Z" />
+                <path d="m8.5 12 2.4 2.4L16 10" />
+              </svg>
+            </span>
+            <h3>Tekshirilgan uylar</h3>
+            <p>Har bir uyning hujjatlari, kadastr ma'lumotlari va egasi to'liq tekshiriladi.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+              </svg>
+            </span>
+            <h3>Tez va oson</h3>
+            <p>Onlayn ko'rikdan bitimgacha — ortiqcha qog'ozbozliksiz, bir necha kunda.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M15 9.2c-.6-1-1.7-1.6-3-1.6-1.7 0-3 1-3 2.4 0 3 6 1.6 6 4.4 0 1.4-1.3 2.4-3 2.4-1.3 0-2.4-.6-3-1.6" />
+                <path d="M12 6v12" />
+              </svg>
+            </span>
+            <h3>Ishonchli narxlar</h3>
+            <p>Bozor narxlari asosida shaffof takliflar — yashirin to'lovlarsiz.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner">
+        <div>
+          <h2>Orzuingizdagi uyni birga topamiz</h2>
+          <p>Mutaxassisimiz bepul maslahat beradi va sizga mos uylarni tanlab beradi.</p>
+        </div>
+        <a href="#aloqa" class="btn btn--accent btn--lg">Bepul maslahat</a>
+      </div>
+    </section>
+
+    <section class="section" id="aloqa">
+      <div class="container contact">
+        <div class="contact__copy">
+          <span class="eyebrow"><span class="dot"></span> Aloqa</span>
+          <h2>Biz bilan bog'laning</h2>
+          <p class="muted">Savolingiz bormi yoki uyni ko'rmoqchimisiz? Formani to'ldiring — tez orada qo'ng'iroq qilamiz.</p>
+          <ul class="contact__list">
+            <li>
+              <a href="tel:+998976577766">
+                <span class="contact__ico">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2Z"/></svg>
+                </span>
+                +998 97 657 77 66
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/998976577766?text=Salom%2C%20uy%20haqida%20ma%27lumot%20olmoqchiman." target="_blank" rel="noopener">
+                <span class="contact__ico contact__ico--wa">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+                </span>
+                WhatsApp: +998 97 657 77 66
+              </a>
+            </li>
+            <li>
+              <a href="mailto:salom@uybor.uz">
+                <span class="contact__ico">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </span>
+                salom@uybor.uz
+              </a>
+            </li>
+            <li>
+              <span class="contact__ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              </span>
+              Toshkent, Amir Temur shoh ko'chasi 108
+            </li>
+          </ul>
+          <a class="btn btn--accent contact__wa" href="https://wa.me/998976577766?text=Salom%2C%20uy%20haqida%20ma%27lumot%20olmoqchiman." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+            WhatsApp orqali yozish
+          </a>
+        </div>
+        <form class="contact__form" id="contactForm" novalidate>
+          <label class="field field--stack">
+            <span>Ismingiz</span>
+            <input type="text" name="name" placeholder="Ism sharif" required />
+          </label>
+          <label class="field field--stack">
+            <span>Telefon raqamingiz</span>
+            <input type="tel" name="phone" placeholder="+998 __ ___ __ __" required />
+          </label>
+          <label class="field field--stack">
+            <span>Xabar</span>
+            <textarea name="message" rows="4" placeholder="Qanday uy qidiryapsiz?"></textarea>
+          </label>
+          <button type="submit" class="btn btn--dark btn--block">Xabar yuborish</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="brand brand--footer">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11 12 4l9 7" />
+            <path d="M5 10v10h14V10" />
+            <path d="M10 20v-5h4v5" />
+          </svg>
+        </span>
+        <span class="brand__text">Uy<span>Bor</span></span>
+      </a>
+      <nav class="footer__links">
+        <a href="#uylar">Uylar</a>
+        <a href="#nega-biz">Nega biz</a>
+        <a href="#aloqa">Aloqa</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> UyBor. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <div class="cart" id="cart" aria-hidden="true">
+    <div class="cart__backdrop" data-cart-close></div>
+    <aside class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart__head">
+        <h3 id="cartTitle">Savatcha <span class="cart__head-count" id="cartHeadCount">0</span></h3>
+        <button class="cart__close" type="button" data-cart-close aria-label="Yopish">&times;</button>
+      </div>
+      <div class="cart__items" id="cartItems"></div>
+      <p class="cart__empty" id="cartEmpty">Savatchangiz bo'sh. Uylarni <b>yurakcha</b> yoki <b>"Sotib olish"</b> orqali qo'shing.</p>
+      <div class="cart__foot">
+        <div class="cart__total">
+          <span>Jami summasi</span>
+          <strong id="cartTotal">0 so'm</strong>
+        </div>
+        <button class="btn btn--accent btn--block" type="button" id="cartCheckout">Sotib olishni yakunlash</button>
+        <button class="btn btn--ghost btn--block" type="button" id="cartClear">Savatni tozalash</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="quick-contact">
+    <a class="qc qc--wa" href="https://wa.me/998976577766?text=Salom%2C%20uy%20haqida%20ma%27lumot%20olmoqchiman." target="_blank" rel="noopener" aria-label="WhatsApp orqali yozish">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+    </a>
+    <a class="qc qc--call" href="tel:+998976577766" aria-label="Qo'ng'iroq qilish">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2Z"/></svg>
+    </a>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" data-close aria-label="Yopish">&times;</button>
+      <div class="modal__media">
+        <img id="modalMain" src="" alt="" />
+        <div class="modal__thumbs" id="modalThumbs"></div>
+      </div>
+      <div class="modal__info">
+        <span class="modal__type" id="modalType"></span>
+        <h3 id="modalTitle"></h3>
+        <p class="loc" id="modalLoc"></p>
+        <div class="specs" id="modalSpecs"></div>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__foot">
+          <div>
+            <span class="modal__label">Narxi</span>
+            <span class="price" id="modalPrice"></span>
+          </div>
+          <div class="modal__actions">
+            <button class="btn btn--accent" type="button" id="modalBuy">Sotib olish</button>
+            <button class="btn btn--ghost" type="button" id="modalCta">Bog'lanish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
